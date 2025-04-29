@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LOCAL - Trang chủ</title>
+  <link rel="icon" href="local-logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+    .fade-up.active { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-[#FFF7E9] text-[#333]">
+
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <img src="local-logo.png" alt="LOCAL logo" class="h-9" />
+      <span class="text-xl font-bold text-[#333]">LOCAL</span>
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm items-center">
+      <a href="local-homepage.html" class="hover:text-[#6E7A8A]">Trang chủ</a>
+      <a href="local-marketplace.html" class="hover:text-[#6E7A8A]">Marketplace</a>
+      <a href="#contact" class="text-white bg-[#B9FBC0] px-4 py-2 rounded-full hover:bg-[#A0e8b0]">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="py-20 px-6 text-center bg-gradient-to-b from-[#FFF7E9] to-white fade-up">
+  <h1 class="text-4xl font-bold text-[#1c1c1c] mb-4 leading-snug">Marketing Online Giá Rẻ.<br/>Dành Riêng Cho Doanh Nghiệp Nhỏ.</h1>
+  <p class="text-lg text-[#444] mb-6">Kết nối freelancer trẻ tài năng với SMEs – chỉ từ 690.000đ/tháng.</p>
+  <div class="flex justify-center gap-4">
+    <a href="local-marketplace.html" class="bg-[#B9FBC0] px-6 py-3 rounded-full text-[#1c1c1c] hover:shadow">Bắt đầu ngay</a>
+    <a href="#contact" class="border border-[#6E7A8A] px-6 py-3 rounded-full text-[#6E7A8A] hover:bg-[#f8f8f8]">Dùng thử miễn phí 7 ngày</a>
+  </div>
+</section>
+
+<section id="contact" class="py-20 px-6 bg-[#B9FBC0] fade-up">
+  <div class="max-w-xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-6 text-[#1c1c1c]">Liên hệ tư vấn</h2>
+    <form class="space-y-4">
+      <input type="text" placeholder="Họ và tên" class="w-full p-3 rounded-lg border border-gray-300" />
+      <input type="email" placeholder="Email" class="w-full p-3 rounded-lg border border-gray-300" />
+      <textarea rows="4" placeholder="Bạn cần gì?" class="w-full p-3 rounded-lg border border-gray-300"></textarea>
+      <button class="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">Gửi yêu cầu</button>
+    </form>
+  </div>
+</section>
+
+<footer class="bg-[#6E7A8A] text-white py-10 text-center text-sm">
+  © 2025 LOCAL – Kết nối · Phát triển · Thành công
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+  });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
